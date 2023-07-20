@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déborah</title>
+</head>
+
+<body>
+    <div id="conteudo">
+<h1>Aceita namorar comigo?</h1>
+<button class="bnt" onclick="SIM()">SIM</button>
+<button class="bnt" onclick="desviar(this)" onmouseover="desviar(this)">NÃO</button>
+    </div>
+</body>
+
+<style>
+#conteudo {
+    background: #a612eb;
+    width: 100%;
+    height: 110%;
+    position: fixed;
+    padding-top: 200px;
+    text-align: center;
+    top:0%;
+    left:0%;
+    }
+.bnt {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 70px;
+    border-radius: 10px;
+    }
+</style>
+
+<script>
+    function SIM(){
+        alert("Você aceitou namorar comigo! Te amo <3")
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://www.youtube.com/watch?v=dLWKgC_5xuM&ab_channel=Z%C3%A9Vaqueiro-Topic";
+    }
+
+    function desviar(t) {
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(35, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log("opa, desviei...");
+    }
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+    </script>
+
+</html>
